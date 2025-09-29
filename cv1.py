@@ -138,22 +138,9 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    # Functions for testing (functions.py)
-    all_functions = [
-        (sphere, [-5, 5], "Sphere"),
-        (schwefel, [-500, 500], "Schwefel"),
-        (rosenbrock, [-5, 10], "Rosenbrock"),
-        (rastrigin, [-5.12, 5.12], "Rastrigin"),
-        (griewank, [-10, 10], "Griewank"),
-        (levy, [-10, 10], "Levy"),
-        (michalewicz, [0, np.pi], "Michalewicz"),
-        (zakharov, [-5, 10], "Zakharov"),
-        (ackley, [-5, 5], "Ackley"),
-    ]
-
     # Filter functions and algorithms based on arguments
     selected_functions = [
-        f for f in all_functions if args.function is None or f[2] == args.function
+        f for f in functions if args.function is None or f[2] == args.function
     ]
     selected_algorithms = [
         a for a in algorithms if args.algorithm is None or a[1] == args.algorithm

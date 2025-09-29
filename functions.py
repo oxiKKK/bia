@@ -21,7 +21,7 @@ def rosenbrock(x: np.ndarray):
     # Handle both single points and grid inputs
     x1 = x[..., :-1]  # All but last dimension
     x2 = x[..., 1:]  # All but first dimension
-    return np.sum(100.0 * (x2 - x1**2) ** 2 + (1 - x1) ** 2, axis=-1)
+    return np.sum(100.0 * (x2 - x1**2) ** 2 + (x1 - 1) ** 2, axis=-1)
 
 
 # Rastrigin function
@@ -79,3 +79,16 @@ def ackley(x: np.ndarray):
     sum1 = np.sum(x**2, axis=-1)
     sum2 = np.sum(np.cos(c * x), axis=-1)
     return -a * np.exp(-b * np.sqrt(sum1 / d)) - np.exp(sum2 / d) + a + np.e
+
+
+functions = [
+    (sphere, [-5, 5], "Sphere"),
+    (schwefel, [-500, 500], "Schwefel"),
+    (rosenbrock, [-10, 10], "Rosenbrock"),
+    (rastrigin, [-5.12, 5.12], "Rastrigin"),
+    (griewank, [-10, 10], "Griewank"),
+    (levy, [-10, 10], "Levy"),
+    (michalewicz, [0, np.pi], "Michalewicz"),
+    (zakharov, [-10, 10], "Zakharov"),
+    (ackley, [-32.768, 32.768], "Ackley"),
+]

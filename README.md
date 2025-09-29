@@ -6,6 +6,21 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV2
+
+```bash
+python cv2.py
+```
+
+For each learning algorithm should look like this (non-animated this time):
+
+![alt text](annealing.png)
+
+- L,M temperature is hardcoded per-function in `cv2.py::temperature_for_function`
+- Limited to N iterations (hardcoded in code)
+- After closing the window, the new algorithm should appear on all of the functions.
+- Applied to all functions from previous lesson.
+
 # CV1
 
 ```bash

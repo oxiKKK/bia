@@ -33,7 +33,7 @@ def animate_optimization_grid(functions_list, algorithm, algo_name, samples):
         ax = fig.add_subplot(rows, cols, i + 1, projection="3d")
 
         # Create surface for this function
-        grid_samples = 30  # Reduced for performance
+        grid_samples = 50
         xs_grid = np.linspace(lo, hi, grid_samples)
         ys_grid = np.linspace(lo, hi, grid_samples)
         X, Y = np.meshgrid(xs_grid, ys_grid, indexing="xy")
@@ -145,7 +145,7 @@ def animate_optimization_grid(functions_list, algorithm, algo_name, samples):
         repeat=False,
     )
 
-    plt.tight_layout(pad=3.0)
+    plt.tight_layout(pad=2.0)
     plt.show()
     return ani
 

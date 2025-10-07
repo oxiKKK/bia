@@ -6,6 +6,14 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV3
+
+```bash
+python cv2.py
+```
+
+![alt text](tsp.png)
+
 # CV2
 
 ```bash

@@ -68,7 +68,7 @@ def simulated_annealing_with_heatmap(func, bounds, samples, T_0, T_min, alpha=AL
             delta = neighbor_value - current_value
             # Prevent division by zero when temperature is very low
             if T <= 1e-10:
-                probability = 0.0  # dont acceptance
+                probability = 0.0  # dont accept
             else:
                 probability = math.exp(-delta / T)
             r = np.random.uniform(0, 1)
@@ -111,7 +111,7 @@ def animate_simulated_annealing_combined(
     x_grid = np.linspace(lo, hi, grid_samples)
     y_grid = np.linspace(lo, hi, grid_samples)
     X, Y = np.meshgrid(x_grid, y_grid)
-    XY = np.stack([X, Y, np.zeros_like(X)], axis=-1)
+    XY = np.stack([X, Y], axis=-1)
     Z = func(XY)
 
     # Left plot: 3D surface with search trajectory
@@ -134,8 +134,7 @@ def animate_simulated_annealing_combined(
     # Plot search trajectory
     if len(points) > 0:
         # Calculate Z values for the points
-        points_3d = np.column_stack([points, np.zeros(len(points))])
-        z_values = func(points_3d)
+        z_values = func(points)
 
         # Plot trajectory with temperature-based coloring
         ax1.scatter(
@@ -151,7 +150,7 @@ def animate_simulated_annealing_combined(
         )
 
         # Mark the best point
-        best_z = func(np.array([best_point[0], best_point[1], 0]))
+        best_z = func(best_point)
         ax1.scatter(
             best_point[0],
             best_point[1],

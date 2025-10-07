@@ -37,7 +37,7 @@ def animate_optimization_grid(functions_list, algorithm, algo_name, samples):
         xs_grid = np.linspace(lo, hi, grid_samples)
         ys_grid = np.linspace(lo, hi, grid_samples)
         X, Y = np.meshgrid(xs_grid, ys_grid, indexing="xy")
-        XY = np.stack([X, Y, np.full_like(X, z)], axis=-1)
+        XY = np.stack([X, Y], axis=-1)
         Z = func(np.asarray(XY))
 
         # Plot surface

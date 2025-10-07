@@ -9,7 +9,7 @@ How to run (after setupping venv & requirements):
 # CV3
 
 ```bash
-python cv2.py
+python cv3.py
 ```
 
 ![alt text](tsp.png)

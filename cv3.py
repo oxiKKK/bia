@@ -10,7 +10,7 @@ import numpy as np
 # ================================================================
 
 # pocet mest ktere musime navstivit
-CITY_COUNT = 30
+CITY_COUNT = 200
 
 # pocet permutaci nahodnych tras
 # vyssi hodnota = lepsi vysledek, ale pomalejsi beh
@@ -18,7 +18,7 @@ NP = 120
 
 # pocet iteraci (generaci) algoritmu. vyssi hodnota = lepsi vysledek
 # ale pomalejsi beh
-ITERATIONS = 100
+ITERATIONS = 1000
 
 # sleep mezi animacemi v ms
 ANIMATION_INTERVAL = 1

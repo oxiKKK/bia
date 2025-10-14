@@ -6,13 +6,22 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV4
+
+```bash
+python cv4.py --function Ackley
+```
+
+![alt text](images/ge.png)
+
+
 # CV3
 
 ```bash
 python cv3.py
 ```
 
-![alt text](tsp.png)
+![alt text](images/tsp.png)
 
 # CV2
 
@@ -22,7 +31,7 @@ python cv2.py
 
 For each learning algorithm should look like this (non-animated this time):
 
-![alt text](annealing.png)
+![alt text](images/annealing.png)
 
 - L,M temperature is hardcoded per-function in `cv2.py::temperature_for_function`
 - Limited to N iterations (hardcoded in code)
@@ -37,8 +46,8 @@ python cv1.py
 
 For each learning algorithm should look something like this:
 
-![alt text](blind.png)
-![alt text](hill.png)
+![alt text](images/blind.png)
+![alt text](images/hill.png)
 
 - It is animated
 - Limited to N iterations (hardcoded in code)

@@ -6,6 +6,15 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV5
+
+```bash
+python cv5.py
+```
+
+![alt text](images/pso.png)
+
+
 # CV4
 
 ```bash

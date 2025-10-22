@@ -90,6 +90,7 @@ def run_pso(
     # Hlavni smycka PSO
     m = 0
     while m < max_iterations:
+        # inercie = setrvacnost
         # Linearne snizuj vahu inercie (z explorace do exploatace)
         w = w_start - (w_start - w_end) * (m / max_iterations)
 

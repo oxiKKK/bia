@@ -6,6 +6,15 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV6
+
+```bash
+python cv6.py
+```
+
+![alt text](images/soma.png)
+
+
 # CV5
 
 ```bash

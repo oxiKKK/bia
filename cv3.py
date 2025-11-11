@@ -21,7 +21,7 @@ NP = 120
 ITERATIONS = 200
 
 # sleep mezi animacemi v ms
-ANIMATION_INTERVAL = 1
+ANIMATION_INTERVAL = 500
 
 # assert CANDIDATE_ROUTES_PER_GENERATION_SIZE > 1
 
@@ -122,7 +122,7 @@ def run_algo(cities: np.ndarray) -> tuple[List[np.ndarray], List[float]]:
     print(f"Mame {len(candidate_routes)} variant tras.")
     print(candidate_routes[0])
 
-    visualize_candidate_routes(cities, candidate_routes)
+    # visualize_candidate_routes(cities, candidate_routes)
 
     history_routes: List[np.ndarray] = []
     history_scores: List[float] = []

@@ -6,6 +6,14 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV7
+
+```
+python cv8.py
+```
+![alt text](images/fireflies.png)
+
+
 # CV6
 
 ```bash

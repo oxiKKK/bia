@@ -118,6 +118,8 @@ def run_firefly_algorithm(
                     # Pohyb svetlusky i smerem k svetlusky j
                     # x_i = x_i + beta * (x_j - x_i) + alpha * epsilon
                     #
+                    # beta = atraktivita = vzdalenost
+                    # alpha = krok nahodneho pohybu
                     firefly_i.position = (
                         firefly_i.position
                         + beta * (firefly_j.position - firefly_i.position)

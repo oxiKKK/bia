@@ -6,11 +6,22 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
-# CV7
+# CV9
+
+```
+python cv9.py # pro tlbo implementaci
+python cv9_visualization.py &> /dev/null # pro vytvoreni excel tabulky
+python cv9_comp.py # pro porovnani vysledku z excel tabulky
+```
+
+![alt text](images/comparison_boxplots.png)
+
+# CV8
 
 ```
 python cv8.py
 ```
+
 ![alt text](images/fireflies.png)
 
 

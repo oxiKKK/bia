@@ -1,3 +1,6 @@
 numpy
 matplotlib
 PyQt6
+pandas
+openpyxl
+tqdm

@@ -26,3 +26,11 @@ Nové řešení vzniká jako kombinace rozdílů mezi náhodně vybranými jedin
 F je váhový faktor (obvykle 0.4–1.0).
 
 Poté se aplikuje křížení s původním řešením a selektivně se vybere lepší jedinec.
+
+## NSGA-II
+
+- Chceme najednou minimalizovat:
+  - S (plášť)
+  - T (celkovou plochu)
+- -> Je to vice cilu najednou -> multikriterialni -> hledani kompromisu
+- Každá modrá tečka = jeden kužel, který algoritmus našel jako velmi výhodný kompromis.

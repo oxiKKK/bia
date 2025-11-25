@@ -67,8 +67,6 @@ for idx, func_name in enumerate(functions):
     ax.tick_params(axis="x", rotation=45)
 
 plt.tight_layout()
-plt.savefig("comparison_boxplots.png", dpi=300, bbox_inches="tight")
-print("Ulozeno: comparison_boxplots.png")
 plt.show()
 
 # graf s prumernymi hodnotami a smerodatnymi odchylkami
@@ -89,17 +87,20 @@ for i, algo in enumerate(algorithms):
         alpha=0.8,
     )
 
+ax.set_yscale("log")
 ax.set_xlabel("Testovaci funkce", fontweight="bold")
 ax.set_ylabel("Prumerna fitness hodnota", fontweight="bold")
-ax.set_title("Porovnani prumernych vysledku algoritmu", fontweight="bold", fontsize=14)
+ax.set_title(
+    "Porovnani prumernych vysledku algoritmu",
+    fontweight="bold",
+    fontsize=14,
+)
 ax.set_xticks(x)
-ax.set_xticks_labels(functions, rotation=45, ha="right")
+ax.set_xticklabels(functions, rotation=45, ha="right")
 ax.legend(loc="upper left")
 ax.grid(True, alpha=0.3, axis="y")
 
 plt.tight_layout()
-plt.savefig("comparison_means.png", dpi=300, bbox_inches="tight")
-print("Ulozeno: comparison_means.png")
 plt.show()
 
 # tabulka s mean hodnotami
@@ -145,8 +146,6 @@ for i in range(len(algorithms) + 1):
     table[(len(table_data), i)].set_text_props(weight="bold")
 
 plt.title("Tabulka prumernych vysledku", fontweight="bold", fontsize=14, pad=20)
-plt.savefig("comparison_table.png", dpi=300, bbox_inches="tight")
-print("Ulozeno: comparison_table.png")
 plt.show()
 
 # convergence graf pro vybranou funkci (napr. Sphere)
@@ -180,8 +179,4 @@ ax.legend()
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig(f"convergence_{selected_func}.png", dpi=300, bbox_inches="tight")
-print(f"Ulozeno: convergence_{selected_func}.png")
 plt.show()
-
-print("\nVizualizace dokoncena!")

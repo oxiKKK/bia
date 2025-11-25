@@ -6,6 +6,14 @@ Explanation of setup:
 
 How to run (after setupping venv & requirements):
 
+# CV10
+
+```
+python cv10.py
+```
+
+![alt text](images/nsga2.png)
+
 # CV9
 
 ```
